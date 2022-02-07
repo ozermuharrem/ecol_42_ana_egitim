@@ -15,14 +15,28 @@
 
 void *ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *d;
-	unsigned char *s;
+	size_t i;
 
-	d = (unsigned char *)dst;
-	s = (unsigned char *)src;
-
-	while (len--)
-		*d++ = *s++;
+	if (!dst && !src)
+		return (0);
+	i = 0;
+	if ((size_t)dst - (size_t)src < len)
+		{
+			i = len - 1;
+			while (i < len)
+			{
+				((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+				i--;
+			}
+		}
+	else
+	{
+		while ( i < len)
+		{
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
+	}
 	return (dst);
 }
 
@@ -33,6 +47,6 @@ int main()
 
 	ft_memmove(hedef_dst, kaynak_src, 15);
 
-	printf("past : %s",hedef_dst);
-	printf("\n out put %s:",memmove(hedef_dst, kaynak_src,5));
+	printf("past : %s\n",hedef_dst);
+	printf("out put: %s",memmove(hedef_dst, kaynak_src,5));
 }
