@@ -1,17 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/04 15:15:51 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/09 21:05:53 by mozer            ###   ########.fr       */
+/*   Created: 2022/02/09 21:37:55 by mozer             #+#    #+#             */
+/*   Updated: 2022/02/09 21:43:40 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+#include <stdio.h>
+#include <string.h>
+
+int ft_tolower(int c)
 {
-	ft_memset(s, 'x', n);
+    if (c >= 'A' && c <= 'Z')
+        return (c + 32);
+    return (c);
+}
+
+int main(){
+
+    printf("%c",ft_tolower('A'));
 }

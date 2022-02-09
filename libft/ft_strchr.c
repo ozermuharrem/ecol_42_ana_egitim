@@ -1,17 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/04 15:15:51 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/09 21:05:53 by mozer            ###   ########.fr       */
+/*   Created: 2022/02/09 22:27:09 by mozer             #+#    #+#             */
+/*   Updated: 2022/02/09 22:31:29 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+#include <stdio.h>
+
+char *ft_strchr(const char *s, int c)
 {
-	ft_memset(s, 'x', n);
+    while (*s != '\0' && c != *s)
+        s++;
+    if (c == *s)
+        return ((char *)s);
+    return (0);
+} 
+
+int main()
+{
+    char dizi[] = "Elmalikek";
+
+    printf("%s",ft_strchr(dizi, 'a'));
+
+    return (0);
 }
