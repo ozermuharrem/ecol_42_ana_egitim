@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/04 14:34:19 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/09 20:53:34 by mozer            ###   ########.fr       */
+/*   Created: 2022/02/09 20:50:52 by mozer             #+#    #+#             */
+/*   Updated: 2022/02/09 21:05:55 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-void	*ft_memset(void *str, int c, size_t len)
-{
-	unsigned char	*string;
+# include <unistd.h>
+# include <stdlib.h>
 
-	string = (unsigned char *) str ;
-	while (len -- > 0)
-		*(string++) = (unsigned char)c;
-	return (str);
-}
+void    ft_bzero(void *s, size_t n);
+void    *ft_memset(void *str, int c, size_t len);
+int ft_isalnum(int c);
+
+
+
+#endif
