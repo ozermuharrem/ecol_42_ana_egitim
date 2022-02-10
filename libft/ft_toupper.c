@@ -6,12 +6,11 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 23:24:21 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/09 21:36:01 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/10 21:56:26 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include	"libft.h"
 
 int	ft_toupper(int c)
 {
@@ -21,13 +20,3 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
-
-int main()
-{
-	printf("%c",ft_toupper('a'));
-
-	return 0;
-}
-
-
