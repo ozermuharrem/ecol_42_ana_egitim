@@ -3,23 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mozer <mozer@42.tr>                        +#+  +:+       +#+        */
+/*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:35:47 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/02 16:40:16 by mozer            ###   ########.tr       */
+/*   Updated: 2022/02/10 20:42:32 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include	"libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-	return ( c >= 0 && c <= 127);
-}
-
-int main()
-{
-	printf("%d", ft_isascii('k'));
-	
-	return 0;
+	return (c >= 0 && c <= 127);
 }

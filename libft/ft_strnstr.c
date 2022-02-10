@@ -6,21 +6,21 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 00:04:02 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/10 00:17:25 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/10 21:26:17 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include	"libft.h"
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    size_t h;
-    size_t n;
+	size_t	h;
+	size_t	n;
 
-    h = 0;
-    if (needle[0] == '\0')
-        return ((char *)haystack);
-    while (haystack[h] != '\0')
+	h = 0;
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	while (haystack[h] != '\0')
 	{
 		n = 0;
 		while (haystack[h + n] == needle[n] && (h + n) < len)
@@ -34,17 +34,4 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 		h++;
 	}
 	return (0);
-} 
-
-// bu nu anlamadım suan 
-
-int main(){
-    
-    char *cp1 = "bilgisayar";
-    char *cp2 = "sayar";
-
-    printf("d",ft_strnstr(cp1,cp2,5));
-
-    return (0);
-
 }

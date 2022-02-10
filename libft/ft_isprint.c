@@ -3,25 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mozer <mozer@42.tr>                        +#+  +:+       +#+        */
+/*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:41:24 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/02 16:43:55 by mozer            ###   ########.tr       */
+/*   Updated: 2022/02/10 20:45:00 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include	"libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-
-	return ( c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }
-
-int	main()
-{
-	printf("%d", ft_isprint('/'));
-	return 0;
-}
-
-
