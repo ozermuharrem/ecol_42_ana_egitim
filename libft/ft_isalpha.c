@@ -6,22 +6,23 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 13:56:31 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/10 20:41:41 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/11 12:37:16 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-int	ft_isalpha(char str)
+int	ft_isalpha(int str)
 {
-	if (str >= 'a' && str <= 'z')
+	if ((str >= 'a' && str <= 'z') || (str >= 'A' && str <= 'Z'))
 	{
 		return (1);
 	}
-	else if (str >= 'Z' && str <= 'Z')
-	{
-		return (1);
-	}
-	else
-		return (0);
+	return (0);
 }
+/*#include <stdio.h>
+
+int main(){
+	printf("%s",ft_isalpha('6'));
+	return (0);
+} */

@@ -6,12 +6,12 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 15:15:51 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/09 21:05:53 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/11 14:36:23 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 'x', n);
+	ft_memset(s, '\0', n);
 }

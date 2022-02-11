@@ -3,8 +3,6 @@
 
 int	main()
 {
-	char ulke[]="Turkiye";
-	
-	ft_bzero(ulke,3);
-	printf("%s", ulke);
+    char xyz[] = "bilgisayar";
+	printf("%s",ft_memset(xyz, 'x', 5));
 }
