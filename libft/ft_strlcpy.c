@@ -6,29 +6,36 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 21:35:36 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/10 21:14:51 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/14 11:57:56 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
-
-size_t	ft_strlcpy(char *hedef, const char *kaynak, size_t hedefsayi)
+#include "libft.h"
+/*
+ strLcpy hedefe her zaman tek bir NUL baytı yazar (boyut sıfır değilse)
+ Ortaya çıkan dize kesilse bile NUL ile sonlandırılacağı garanti edilir
+ Ayrıca, strNcpy'den farklı olarak, arabelleğin geri kalanını
+ doldurmak için birden fazla NUL baytı yazmakla zaman kaybetmez.
+ 
+ NUL ile sonlandırılan src dizesinden dst'ye -1 karaktere kadar kopyalar
+ sonucu NUL ile sonlandırır.
+*/
+size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	kaynaksayi;
-	size_t	i;
-
-	if (!hedef || !kaynak)
-		return (0);
-	kaynaksayi = ft_strlen(kaynak);
-	i = 0;
-	if (hedefsayi != 0)
-	{
-		while (kaynak[i] != '\0' && i < (hedefsayi - 1))
-		{
-			hedef[i] = kaynak[i];
-			i ++;
-		}
-		hedef[i] = '\0';
-	}
-	return (kaynaksayi);
+    size_t  i;
+    size_t  src_l;
+    i = 0;
+    src_l = ft_strlen(src); // 38 
+    if (!dstsize)
+        return (src_l);
+    while (src[i] != '\0' && i < dstsize)
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    if (dstsize < src_l)
+        dst[dstsize - 1] = '\0';
+    else if (dstsize != 0)
+        dst[i] = '\0';
+    return (src_l);
 }

@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 20:50:52 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/11 12:37:12 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/14 11:28:41 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int ft_tolower(int c);
 int ft_toupper(int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int ft_atoi(const char *str);
+void    *ft_memchr(const void *s, int c, size_t n);
+size_t	ft_strlcpy(char *hedef, const char *kaynak, size_t hedefsayi);
 
 
 #endif

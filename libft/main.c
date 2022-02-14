@@ -3,6 +3,7 @@
 
 int	main()
 {
-    char xyz[] = "bilgisayar";
-	printf("%s",ft_memset(xyz, 'x', 5));
+    char src[] = "bilgisayar";
+    char dst[] = " ";
+	printf("%zu",ft_strlcpy(dst, src, 1));
 }
