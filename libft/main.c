@@ -1,9 +1,12 @@
 #include	"libft.h"
-#include <stdio.h>
+#include <stdio.h> 
 
-int	main()
+// void    *ft_calloc(size_t count, size_t size);
+
+int main()
 {
-    char src[] = "bilgisayar";
-    char dst[] = " ";
-	printf("%zu",ft_strlcpy(dst, src, 1));
+    int *a;
+    a = (int *) ft_calloc(5, sizeof(int));
+    printf("%p - %d\n", a, *a);
+    printf("%lu",sizeof(int) * 5);
 }
