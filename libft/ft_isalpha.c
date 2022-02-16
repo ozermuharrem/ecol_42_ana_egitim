@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 13:56:31 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/11 12:37:16 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/16 10:45:42 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,3 @@ int	ft_isalpha(int str)
 	}
 	return (0);
 }
-/*#include <stdio.h>
-
-int main(){
-	printf("%s",ft_isalpha('6'));
-	return (0);
-} */

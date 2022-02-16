@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 12:24:21 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/10 21:17:12 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/16 12:26:52 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 size_t	ft_strlen(const char *s)
 {
-	char	*c;
 	size_t	len;
-	
-	c = (char *)s;
+
 	len = 0;
 	while (s[len] != 0)
 	{
