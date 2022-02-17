@@ -6,16 +6,17 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:51:14 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/15 12:54:42 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/17 15:31:58 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd, &c, 1);
+	write(fd, &c, 1);
 }
+
 /*
 #include <stdio.h>
 

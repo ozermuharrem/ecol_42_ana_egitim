@@ -6,24 +6,23 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 22:02:22 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/10 21:31:43 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/17 14:53:49 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-char *ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-    int i;
-    const char *muh;
+	int			i;
+	const char	*muh;
 
-    muh = str;
-
-    i = ft_strlen(str);
-    str = (str + i);
-    while (*str != *muh && c != *str)
-        str--;
-    if (c == *str)
-        return ((char *)str);
-    return (0); 
+	muh = str;
+	i = ft_strlen(str);
+	str = (str + i);
+	while (*str != *muh && c != *str)
+		str--;
+	if (c == *str)
+		return ((char *)str);
+	return (0);
 }

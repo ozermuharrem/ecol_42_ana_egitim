@@ -6,17 +6,17 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 22:27:09 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/10 21:07:05 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/17 14:51:28 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    while (*s != '\0' && c != *s)
-        s++;
-    if (c == *s)
-        return ((char *)s);
-    return  (0);
+	while (*s != '\0' && c != *s)
+		s++;
+	if (c == *s)
+		return ((char *)s);
+	return (0);
 }

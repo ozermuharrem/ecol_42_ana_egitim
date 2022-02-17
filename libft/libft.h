@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 20:50:52 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/15 14:01:18 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/17 14:50:15 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ void    ft_putchar_fd(char c, int fd);
 void    ft_putstr_fd(char *s, int fd);
 void    ft_putendl_fd(char *s, int fd);
 void    ft_putnbr_fd(int n, int fd);
+char	*ft_strchr(const char *s, int c);
+char *ft_strrchr(const char *str, int c);
 
 
 #endif

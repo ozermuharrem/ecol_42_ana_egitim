@@ -6,57 +6,54 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:04:00 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/15 12:05:25 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/17 15:19:56 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-static int	ft_digit_count(long int i)
+int	get_len(int nbr)
 {
-	int	count;
+	int	nbr_len;
 
-	count = 0;
-	if (i < 0)
+	nbr_len = 0;
+	if (nbr <= 0)
+		nbr_len++;
+	while (nbr)
 	{
-		i *= -1;
-		count++;
+		nbr /= 10;
+		nbr_len++;
 	}
-	while (i > 0)
-	{
-		i /= 10;
-		count++;
-	}
-	return (count);
+	return (nbr_len);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char		*str;
-	int			i;
-	long int	nb;
+	char	*str;
+	int		digit;
 
-	nb = n;
-	i = ft_digit_count(nb);
-	if (!(str = malloc(i * sizeof(char) + 1)))
-		return (0);
-	str[i--] = 0;
-	if (nb == 0)
+	digit = get_len(n);
+	str = (char *) ft_calloc(digit + 1, sizeof(char));
+	if (!str)
+		return (NULL);
+	if (n == 0)
+		*str = '0';
+	else if (n < 0)
 	{
-		str = ft_calloc(2, sizeof(char));
-		str[0] = 48;
-	}
-	if (nb < 0)
-	{
+		if (n == -2147483648)
+		{
+			ft_strlcpy(str, "-2147483648", digit + 1);
+			return (str);
+		}
 		str[0] = '-';
-		nb = nb * -1;
+		n *= -1;
 	}
-	while (nb > 0)
+	while (n != 0)
 	{
-		str[i--] = nb % 10 + '0';
-		nb = nb / 10;
+		*(str + --digit) = (n % 10) + '0';
+		n = n / 10;
 	}
 	return (str);
-} 
+}
 
 /* int main yazıp çalıştır */
