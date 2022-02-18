@@ -6,27 +6,56 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 21:55:37 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/10 21:12:43 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/18 11:55:06 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	c;
-	size_t	d;
+	int		i;
+	int		j;
+	size_t	length;
 
-	if (dstsize <= ft_strlen(dst))
-		return (dstsize + ft_strlen(src));
-	c = ft_strlen(dst);
-	d = 0;
-	while (src[d] != '\0' && c + 1 < dstsize)
+	length = ft_strlen(dst);
+	if (size > 0 && size > length)
 	{
-		dst[c] = src[d];
-		c++;
-		d++;
+		i = length;
+		j = 0;
+		while (src[j] && i < (int)size - 1)
+		{
+			dst[i] = src[j];
+			i++;
+			j++;
+		}
+		dst[i] = '\0';
+		return (length + ft_strlen(src));
 	}
-	dst[c] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[d]));
+	return (size + ft_strlen(src));
 }
+
+/*
+#include <stdio.h>
+
+int main()
+{
+	char hayat[] = "biriki";
+	char dunya[] = "gecici";
+	printf("%zu\n",ft_strlcat(hayat,dunya, 5)); 
+
+//	int toplam = ft_strlen(hayat) + ft_strlen(dunya);
+
+
+//	printf("%d",toplam);
+
+	
+
+	for(int s = 0; s < 6 ; s++)
+	{
+		printf("yalan dünya\n");
+	}
+
+	return (0);
+}
+*/
