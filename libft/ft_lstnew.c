@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 12:06:09 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/21 16:05:48 by mozer            ###   ########.fr       */
+/*   Created: 2022/02/21 15:49:14 by mozer             #+#    #+#             */
+/*   Updated: 2022/02/21 22:15:49 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+t_list	*ft_lstnew(void *content)
 {
-	unsigned int	i;
-	char			*str;
+	t_list	*ret;
 
-	if (!s || !f)
-		return (NULL);
-	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!str)
+	ret = malloc(sizeof(t_list));
+	if (!ret)
 		return (0);
-	i = 0;
-	while (s[i])
-	{
-		str[i] = f(i, s[i]);
-		i++;
-	}
-	str[i] = 0;
-	return (str);
+	ret->content = content;
+	ret->next = 0;
+	return (ret);
 }
 
 /*
-char f(unsigned int i, char c)
+#include <stdio.h>
+
+int main()
 {
-    char str;
-    str = c + 1;
-    return (str);
+	char *btl = "listeler";
+	t_list *a;
+
+	a = ft_lstnew(btl);
+	printf("%s", a->content);
 }
+
 */

@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 12:06:09 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/21 16:05:48 by mozer            ###   ########.fr       */
+/*   Created: 2022/02/21 23:28:13 by mozer             #+#    #+#             */
+/*   Updated: 2022/02/21 23:39:50 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned int	i;
-	char			*str;
+	t_list	*ret;
+	t_list	*tmp;
 
-	if (!s || !f)
-		return (NULL);
-	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!str)
-		return (0);
-	i = 0;
-	while (s[i])
+	ret = 0;
+	while (lst)
 	{
-		str[i] = f(i, s[i]);
-		i++;
+		tmp = ft_lstnew(f(lst->content));
+		if (!tmp)
+		{
+			ft_lstclear(&ret, del);
+			return (0);
+		}
+		ft_lstadd_back(&ret, tmp);
+		lst = lst->next;
 	}
-	str[i] = 0;
-	return (str);
+	return (ret);
 }
-
-/*
-char f(unsigned int i, char c)
-{
-    char str;
-    str = c + 1;
-    return (str);
-}
-*/

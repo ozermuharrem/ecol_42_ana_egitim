@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 13:57:58 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/17 15:38:52 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/21 14:37:05 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(aux / 10, fd);
 	ft_putchar_fd((char)(aux % 10 + '0'), fd);
 }
-
-/*
-#include <stdio.h>
-
-int main()
-{
-   main yazılacak
-  
-} 
-*/
