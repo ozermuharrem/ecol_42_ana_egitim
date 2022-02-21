@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 10:33:42 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/17 15:44:38 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/21 10:26:53 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new_str[i] = '\0';
 	return (new_str);
 }
-
-/*
-#include <stdio.h>
-
-int main(){
-    char *ahmet = "mbao";
-    char *x = ",xyz";
-
-    printf("%s",ft_strjoin(ahmet, x));
-}
-*/

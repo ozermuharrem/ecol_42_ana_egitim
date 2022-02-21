@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 11:28:00 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/17 15:54:45 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/21 11:04:42 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[a] = '\0';
 	return (str);
 }
-
-/*
-#include <stdio.h>
- int main()
-{
-    printf("%s\n", ft_strtrim("yasbyas", "asy"));
-} 
-*/

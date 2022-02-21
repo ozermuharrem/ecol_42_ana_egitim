@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 14:57:59 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/17 15:01:06 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/21 09:44:48 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,3 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(s2, s1, ft_strlen(s1) + 1);
 	return (s2);
 }
-
-/*
-#include <stdio.h>
-
-int main()
-{
-    char *arr = "Zararsiz";
-    const char *arr2; 
-    printf("arr in degeri: %s\n",arr);
-    printf("arr2 nin degeri:%s\n",arr2);
-    
-    arr2 = ft_strdup(arr);
-
-    printf("%s\n",arr);
-    printf("arr2 nin yeni degeri : %s",arr2);
-
-
-    return (0);
-} */

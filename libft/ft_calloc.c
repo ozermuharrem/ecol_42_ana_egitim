@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 14:10:07 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/17 14:03:38 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/21 09:33:04 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_memset(dst, 0, tot_size);
 	return (dst);
 }
-
-/*
-int main()
-{
-    int *a;
-    a = (int *) ft_calloc(5, sizeof(int));
-    printf("%p - %d\n", a, *a);
-    printf("%lu",sizeof(int) * 5);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 10:13:22 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/17 15:58:43 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/21 10:15:23 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	new_str[j] = '\0';
 	return (new_str);
 }
-
-/*
-#include <stdio.h>
-int main()
-{
-    char *sub ="ayvalik";
-
-    char *str = ft_substr(sub, 2, 1);
-
-    printf("%s",str);
-} 
-*/
