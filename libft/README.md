@@ -1,6 +1,7 @@
 <h1 aling="center">Libft 42 Cursus</h1>
-
-<p>'ft_isalpha' -> Alfabetik karekter testi </p>
+<ul>
+<li>'ft_isalpha' -> Alfabetik karekter testi </li>
+ </ul>
 <p>'ft_isdigit' -> Sayısal karekter testi</p>
 <p>'ft_isalnum' -> Alfanumerik karekter testi</p>
 <p>'ft_isascii' -> Ascii değeri olan karekterlerin testi</p>
