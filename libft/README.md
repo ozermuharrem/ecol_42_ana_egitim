@@ -26,6 +26,12 @@
 
 <br><br>
 
-<h2>Part 2</h2>
+<h2>Part 2</h2> 
+
+<p>'ft_substr' -> * s ile gösterilen karekter dizisinin start paremetre değerinden sonrasını len paremetre değeri kadar döndüren fonksiyondur</p>
+<p> 'ft_strjoin' -> * s1 paremetresi ile * s2 paremetresini birleştirir</p>
+<p> 'ft_strtrim' -> * s1 paremetresi ile gösterilen karekter dizisinde ki * s2 paremetresinde ki karekterleri karşılaştırıp kırpan fonksiyon </p>
+
+
 
 
