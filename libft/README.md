@@ -9,5 +9,5 @@
 <p>'ft_memset' -> str paremetresi ile gönderilen karekter dizisini len paremetresi kadar c paremetresi ile gönderilen karekter ile değiştiren fonksiyon</p>
 <p>'ft_bzero' -> Bellekte n kadar s bytında ki değeri silen fonksiyon</p>
 <p>'ft_memcpy' -> * src paremetresi ile gösterilen bellek bölgesinde ki karekterleri n paremetresi değeri kadar uzunlukta dst paremetresinde ki bellek bölgesine kopyalayan fonksiyon</p>
-<p text_color="red">'ft_memmove' -> * src paremetresi ile gösterilen bellek bölgesinde ki karekterleri n paremetresi değeri kadar uzunlukta dst paremetresinde ki bellek bölgesine kopyalayan fonksiyon ft_memcpy den farkı over-lop kopya her zaman tahribatsız bir şekilde yapılır </p>
+<p &text_color="red">'ft_memmove' -> * src paremetresi ile gösterilen bellek bölgesinde ki karekterleri n paremetresi değeri kadar uzunlukta dst paremetresinde ki bellek bölgesine kopyalayan fonksiyon ft_memcpy den farkı over-lop kopya her zaman tahribatsız bir şekilde yapılır </p>
 
