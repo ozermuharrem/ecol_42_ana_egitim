@@ -6,11 +6,11 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 13:56:31 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/16 10:45:42 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:12:09 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 int	ft_isalpha(int str)
 {

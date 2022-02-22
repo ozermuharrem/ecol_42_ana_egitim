@@ -6,11 +6,11 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:41:24 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/16 11:53:21 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:11:59 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

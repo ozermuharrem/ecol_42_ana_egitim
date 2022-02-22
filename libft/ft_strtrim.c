@@ -6,11 +6,11 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 11:28:00 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/21 11:04:42 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:06:37 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 static int	setkontrol(char c, char const *set)
 {

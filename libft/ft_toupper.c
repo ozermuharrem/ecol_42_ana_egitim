@@ -6,11 +6,11 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 23:24:21 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/10 21:56:26 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:06:26 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

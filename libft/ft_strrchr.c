@@ -6,11 +6,11 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 22:02:22 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/18 14:42:22 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:06:47 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    "libft.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
@@ -26,16 +26,3 @@ char	*ft_strrchr(const char *str, int c)
 		return ((char *)str);
 	return (0);
 }
-
-/*
-#include <stdio.h>
-
-int main()
-{
-	char zalim[] = "oyunbozan";
-
-	printf("%s",ft_strrchr(zalim, 'o'));
-
-	return (0);
-}
-*/

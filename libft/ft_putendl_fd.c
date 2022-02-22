@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 13:36:55 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/21 16:04:45 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:10:33 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-
-/*
-#include <stdio.h>
-
-int main()
-{
-
-    char *m = "kocaeli";
-    ft_putendl_fd(m,1);
-
-    return (0);
-}
-*/

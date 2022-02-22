@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:12:27 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/21 11:59:16 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:10:01 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,19 +73,3 @@ char	**ft_split(char const *s, char c)
 	split[j] = 0;
 	return (split);
 }
-
-/*
-#include <stdio.h>
-
-int main()
-{
-	int i = 0;
-	char **a;
-
-	a = ft_split("muharremxozerxahmet", 'x');
-
-	printf("%s",a[0]);
-
-	return (0);
-} 
-*/

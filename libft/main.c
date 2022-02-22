@@ -1,14 +1,12 @@
 #include	"libft.h"
-#include    <stdio.h> 
+#include	<stdio.h> 
 
-int main()
+int	main()
 {
-    char okul[] = "xyztc";
+	char okul[] = "xyztc";
 
-    t_list *root;
-    root =ft_lstnew(okul);
+	t_list	*root;
+	root =ft_lstnew(okul);
 
-    printf("%s",root->content);
-
-
-} 
+	printf("%s",root->content);
+}

@@ -6,11 +6,11 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 12:00:24 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/17 14:27:25 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:12:22 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    "libft.h"
+#include "libft.h"
 
 static int	ft_isspace(int c)
 {

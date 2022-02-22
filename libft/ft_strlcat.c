@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 21:55:37 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/18 11:55:06 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:09:21 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,28 +34,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return (size + ft_strlen(src));
 }
-
-/*
-#include <stdio.h>
-
-int main()
-{
-	char hayat[] = "biriki";
-	char dunya[] = "gecici";
-	printf("%zu\n",ft_strlcat(hayat,dunya, 5)); 
-
-//	int toplam = ft_strlen(hayat) + ft_strlen(dunya);
-
-
-//	printf("%d",toplam);
-
-	
-
-	for(int s = 0; s < 6 ; s++)
-	{
-		printf("yalan dünya\n");
-	}
-
-	return (0);
-}
-*/

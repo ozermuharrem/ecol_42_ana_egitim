@@ -6,11 +6,11 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:04:00 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/21 13:24:59 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:11:54 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 int	get_len(int nbr)
 {

@@ -6,11 +6,11 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 22:59:09 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/18 15:11:52 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:07:10 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    "libft.h"
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -28,18 +28,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
 }
-
-/*
-
-#include <stdio.h>
-
-int main()
-{
-	char il_a[] = "ankara";
-	char il_b[] = "antakya";
-
-	printf("%d",ft_strncmp(il_a, il_b, 3));
-
-	return(0);
-} 
-*/

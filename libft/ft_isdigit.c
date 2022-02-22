@@ -6,11 +6,11 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 14:30:20 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/16 10:56:16 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:12:02 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
