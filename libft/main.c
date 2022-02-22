@@ -1,12 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/22 21:53:42 by mozer             #+#    #+#             */
+/*   Updated: 2022/02/22 21:57:18 by mozer            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include	"libft.h"
 #include	<stdio.h> 
 
-int	main()
+int	main(void)
 {
-	char okul[] = "xyztc";
+	char	*dizi;
 
-	t_list	*root;
-	root =ft_lstnew(okul);
-
-	printf("%s",root->content);
+	dizi = "bonjour";
+	printf("%s", ft_strrchr(dizi, 'o'));
 }

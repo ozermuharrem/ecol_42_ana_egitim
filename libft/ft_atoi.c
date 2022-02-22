@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 12:00:24 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/22 14:12:22 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/23 00:13:41 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,3 @@ int	ft_atoi(const char *str)
 		return (0);
 	return (-1);
 }
-
-/*#include <stdio.h>
-int main()
-{
-    char *str;
-    str = "\n  -123cs644";
-    printf("%d", ft_atoi(str));
-} */

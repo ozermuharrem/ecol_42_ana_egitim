@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 21:35:36 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/22 14:09:02 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/22 23:15:32 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,23 @@
 */
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	src_l;
+	size_t			a;
+	size_t			b;
+	unsigned char	*s;
 
-	i = 0;
-	src_l = ft_strlen(src);
-	if (!dstsize)
-		return (src_l);
-	while (src[i] != '\0' && i < dstsize)
+	a = 0;
+	b = 0;
+	s = (unsigned char *)src;
+	while (s[a] != '\0')
+		a++;
+	if (dstsize != 0)
 	{
-		dst[i] = src[i];
-		i++;
+		while (s[b] != '\0' && b < dstsize - 1)
+		{
+			dst[b] = s[b];
+			b++;
+		}
+		dst[b] = '\0';
 	}
-	if (dstsize < src_l)
-		dst[dstsize - 1] = '\0';
-	else if (dstsize != 0)
-		dst[i] = '\0';
-	return (src_l);
+	return (a);
 }
