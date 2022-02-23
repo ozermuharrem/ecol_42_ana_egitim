@@ -33,6 +33,12 @@
 <li> 'ft_strtrim' -> * s1 paremetresi ile gösterilen karekter dizisinde ki * s2 paremetresinde ki karekterleri karşılaştırıp kırpan fonksiyon </li>
 <li> 'ft_split' -> * s1 paremetresi ile gönderilen dizinin içerisinde bulunan c paremetresi ile gösterilen karekterlerden böler</li>
 <li> 'ft_itoa' -> n paremetresi ile gönderilen int değeri sitringe çevirir.</li>
+<li> 'ft_strmapi' -> dışarıdan gönderilen sitring değeri f fonksiyonundan dönen değeri malloc ile ayrılan bellek alanına atan fonksiyondur</li>
+<li> 'ft_striteri' -> dışarıdan gönderilen sitring değeri f fonksiyonundan dönen değeri malloc ile yer ayırmadan ara bellekte döndüren fonksiyon</li>
+<li> 'ft_putchar_fd' -> char c parametresi le gönderilen fd parametresinin id sine yazan fonksiyon</li>
+  <li> 'ft_putstr_fd' -> gönderilen stringi ekrana yazan fonksiyon</li>
+  <li> 'ft_putendl_fd' -> gönderilen stringi ekrana yazan fonksiyon
+ 
   
 </ul>
 
