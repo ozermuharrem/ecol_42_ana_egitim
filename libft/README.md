@@ -36,9 +36,17 @@
 <li> 'ft_strmapi' -> dışarıdan gönderilen sitring değeri f fonksiyonundan dönen değeri malloc ile ayrılan bellek alanına atan fonksiyondur</li>
 <li> 'ft_striteri' -> dışarıdan gönderilen sitring değeri f fonksiyonundan dönen değeri malloc ile yer ayırmadan ara bellekte döndüren fonksiyon</li>
 <li> 'ft_putchar_fd' -> char c parametresi le gönderilen fd parametresinin id sine yazan fonksiyon</li>
-  <li> 'ft_putstr_fd' -> gönderilen stringi ekrana yazan fonksiyon</li>
-  <li> 'ft_putendl_fd' -> gönderilen stringi ekrana yazan fonksiyon
- 
+<li> 'ft_putstr_fd' -> gönderilen stringi ekrana yazan fonksiyon</li>
+<li> 'ft_putendl_fd' -> gönderilen stringi ekrana yazan (döngü ile yazan) fonksiyon</li>
+<li> 'ft_putnbt_fd' -> gönderilen int değeri ekran basan fonksiyondur</li>
+</ul>  
+<br><br>
+  
+<h2>Bonus Part<h2>  
+<ul>
+<li>'ft_lsrnew' -> yeni liste oluşturan fonksiyon</li>
+<li>'ft_lstadd_front' ->  </li>
+  
   
 </ul>
 
