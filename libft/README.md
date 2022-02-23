@@ -67,9 +67,8 @@
   
   <h2>Libft.h</h2>
   
-  #ifndef ="if not defined" anlamındadır. Bir sabitin tanımlanmamış olması halinde ne yapılacağını bildirmeye yarar. #include Başka bir kütükten kaynak program ya da text çağırmak için kullanılır. #if Bir önişlemci sabitinin ya da ifadenin DOĞRU olup olmadığını denetler. 
-  #define = önişlemci direktifi, programlarımızın herhangi bir işlem satırında kullanılmak üzere, istediğimiz ifadelerin kısa bir isim altında tanımlamamızı sağlar. 
+ <p> #ifndef ="if not defined" anlamındadır. Bir sabitin tanımlanmamış olması halinde ne yapılacağını bildirmeye yarar. #include Başka bir kütükten kaynak program ya da text çağırmak için kullanılır. #if Bir önişlemci sabitinin ya da ifadenin DOĞRU olup olmadığını denetler. </p>
+<p>  #define = önişlemci direktifi, programlarımızın herhangi bir işlem satırında kullanılmak üzere, istediğimiz ifadelerin kısa bir isim altında tanımlamamızı sağlar. </p>
 
-size_t = bir nesnenin boyutunu tutan herhangi bir değişken yada argüman bildiriminde önerilen yoldur. 
-GNU Sisteminde size_t ya unsigned int yada unsigned long int türüne eşdeğerdir. 
-
+<p>size_t = bir nesnenin boyutunu tutan herhangi bir değişken yada argüman bildiriminde önerilen yoldur. 
+GNU Sisteminde size_t ya unsigned int yada unsigned long int türüne eşdeğerdir. </p>
