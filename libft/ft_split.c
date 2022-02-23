@@ -6,70 +6,77 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:12:27 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/22 15:38:45 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/23 10:43:12 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_place(char **str, char const *s1, char ch, int wordcount)
+static int	count_strings(char const *s, char c)
 {
-	int		index;
-	int		word_len;
-	int		word;
+	int	act_pos;
+	int	str_count;
 
-	word = 0;
-	index = 0;
-	word_len = 0;
-	while (word < wordcount)
+	act_pos = 0;
+	str_count = 0;
+	if (s[act_pos] == c)
+		str_count--;
+	while (s[act_pos] != '\0')
 	{
-		while (s1[index] != '\0' && s1[index] == ch)
-			index++;
-		while (s1[index] != '\0' && s1[index] != ch)
-		{
-			word_len++;
-			index++;
-		}
-		str[word] = ft_substr(s1, index - word_len, word_len);
-		word_len = 0;
-		word++;
+		if (s[act_pos] == c && s[act_pos + 1] != c && s[act_pos + 1] != '\0')
+			str_count++;
+		act_pos++;
 	}
-	str[word] = 0;
-	return (str);
+	str_count++;
+	return (str_count);
 }
 
-static int	strcount(char const *str, char c)
+char	*malloc_strings(const char *s, char c)
 {
+	char	*word;
 	int		i;
-	int		count;
 
 	i = 0;
-	count = 0;
-	while (str[i] != '\0')
+	while (s[i] && s[i] != c)
+		i++;
+	word = (char *)malloc(sizeof(char) * (i + 1));
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (s[i] && s[i] != c)
 	{
-		if (str[i] == c)
-			i++;
-		else
-		{
-			count++;
-			while (str[i] && str[i] != c)
-				i++;
-		}
+		word[i] = s[i];
+		i++;
 	}
-	return (count);
+	word[i] = '\0';
+	return (word);
 }
 
-char	**ft_split(const char *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char	**str;
-	int		wrdcnt;
+	int		words;
+	char	**tab;
+	int		i;
 
 	if (!s)
-		return (0);
-	wrdcnt = strcount(s, c);
-	str = (char **)malloc(sizeof(char *) * wrdcnt + 1);
-	if (!str)
-		return (0);
-	ft_place(str, s, c, wrdcnt);
-	return (str);
+		return (NULL);
+	words = count_strings(s, c);
+	tab = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!tab)
+		return (NULL);
+	i = 0;
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		if (*s && *s != c)
+		{
+			tab[i] = malloc_strings(s, c);
+			i++;
+			while (*s && *s != c)
+				s++;
+		}
+	}
+	tab[i] = NULL;
+	return (tab);
 }

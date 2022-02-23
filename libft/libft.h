@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 20:50:52 by mozer             #+#    #+#             */
-/*   Updated: 2022/02/22 16:33:07 by mozer            ###   ########.fr       */
+/*   Updated: 2022/02/23 13:03:42 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 typedef struct s_list
 {
 	void			*content;
-	struct s_list	*next;	
+	struct s_list	*next;
 }					t_list;
 
 t_list	*ft_lstnew(void *content);

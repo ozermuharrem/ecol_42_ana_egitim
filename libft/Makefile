@@ -6,7 +6,7 @@
 #    By: mozer <mozer@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/22 16:15:22 by mozer             #+#    #+#              #
-#    Updated: 2022/02/22 21:50:05 by mozer            ###   ########.fr        #
+#    Updated: 2022/02/23 11:36:18 by mozer            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,21 +26,22 @@ BNS_OBJS    = $(BNS_SRCS:.c=.o)
 
 all			: $(NAME)
 
-$(NAME)		: $(SRCS) $(HEADER)
-	@$(CC) -c $(SRCS) $(BNS_SRCS)
-	@ar rc $(NAME) $(OBJS) $(BNS_OBJS)
+$(NAME)		: $(SRCS) $(HEADER) $(OBJS)
+	@$(CC) -c $(SRCS)
+	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
-ob 			: $(SRCS) $(BNS_SRCS)
-	@$(CC) -c  $(SRCS) $(BNS_SRCS)
-
-run			:
-	@$(CC) $(SRCS) $(BNS_SRCS) && ./a.out
+bonus		: $(HEADER) $(BNS_SRCS)
+	@$(CC) -c $(BNS_SRCS)
+	@ar rc $(NAME) $(BNS_OBJS)
+	@ranlib $(NAME)
 
 clean		: $(OBJS)
-	@$(RM) $(OBJS) $(BNS_OBJS)
+	@$(RM) *.o *.out *.gch
 
 fclean		: clean
-	@rm -f $(NAME)
+	@$(RM) $(NAME)
 
 re			: fclean all
+
+.PHONY		: all clean fclean re bonus
