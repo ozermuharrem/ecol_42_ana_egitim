@@ -45,11 +45,31 @@
 <h2>Bonus Part<h2>  
 <ul>
 <li>'ft_lsrnew' -> yeni liste oluşturan fonksiyon</li>
-<li>'ft_lstadd_front' ->  </li>
+<li>'ft_lstadd_front' -> yeni eleman atama ve atanan elemanı listenin başına atayan fonksiyondur</li> 
+<li> 'ft_lstsize' -> liste içerisinde ki elemanları sayan fonksiyondur</li>
+<li> 'ft_lstlas' -> liste içerisinde ki son elemana ulaşan fonksiyon</li>
+<li> 'ft_lstadd_back' -> liste içerisinde son elemana ulaşıp en sona atama</li>
+<li> 'ft_lstdelone' -> liste içerisinde ki bir elemanı silme işlemi </li>
+<li> 'ft_lstclear' -> tüm listeyi silen fonksiyon</li>
+<li>'ft_lstiter' -> listenin contentini dışarıdan gönderinlen farklı bir fonksiyona gönderilen fonksiyondur</li>
+<li>'ft_lstmap' -> listenin contentindeki elemanları dışarıdan gönderdiğimiz farklı bir fonksiyon ile çalıştırıp yeni çıktıyı listeye atar</li>
+</ul> 
   
+  <hr>
   
-</ul>
+  <h2>Makefile</h2>
+  
+  <p> eşittir ile gösterilenler değişkendir </p>
+  <p>iki nokta kural atam işlemi </p>
+  arşiv bir dosyası na tek tek derlememek için ihtiyaç duyarız 
+  -c arşiv oluşturmak için -o dosyalarına ihtiyacımız var 
+  -o dosyası olmadan arşiv dosyası olmaz 
+  
+  <h2>Libft.h</h2>
+  
+  #ifndef ="if not defined" anlamındadır. Bir sabitin tanımlanmamış olması halinde ne yapılacağını bildirmeye yarar. #include Başka bir kütükten kaynak program ya da text çağırmak için kullanılır. #if Bir önişlemci sabitinin ya da ifadenin DOĞRU olup olmadığını denetler. 
+  #define = önişlemci direktifi, programlarımızın herhangi bir işlem satırında kullanılmak üzere, istediğimiz ifadelerin kısa bir isim altında tanımlamamızı sağlar. 
 
-
-
+size_t = bir nesnenin boyutunu tutan herhangi bir değişken yada argüman bildiriminde önerilen yoldur. 
+GNU Sisteminde size_t ya unsigned int yada unsigned long int türüne eşdeğerdir. 
 
