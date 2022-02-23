@@ -31,6 +31,9 @@
 <li>'ft_substr' -> * s ile gösterilen karekter dizisinin start paremetre değerinden sonrasını len paremetre değeri kadar döndüren fonksiyondur</li>
 <li> 'ft_strjoin' -> * s1 paremetresi ile * s2 paremetresini birleştirir</li>
 <li> 'ft_strtrim' -> * s1 paremetresi ile gösterilen karekter dizisinde ki * s2 paremetresinde ki karekterleri karşılaştırıp kırpan fonksiyon </li>
+<li> 'ft_split' -> * s1 paremetresi ile gönderilen dizinin içerisinde bulunan c paremetresi ile gösterilen karekterlerden böler</li>
+<li> 'ft_itoa' -> n paremetresi ile gönderilen int değeri sitringe çevirir.</li>
+  
 </ul>
 
 
