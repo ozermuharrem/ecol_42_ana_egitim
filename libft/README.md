@@ -72,3 +72,8 @@
 
 <p>size_t = bir nesnenin boyutunu tutan herhangi bir değişken yada argüman bildiriminde önerilen yoldur. 
 GNU Sisteminde size_t ya unsigned int yada unsigned long int türüne eşdeğerdir. </p>
+<img width="224" alt="Ekran Resmi 2022-02-24 ÖÖ 11 51 36" src="https://user-images.githubusercontent.com/86782430/155492397-883bcfd4-5e50-452f-8c05-17d0e4dd7d8c.png">
+
+
+
+
