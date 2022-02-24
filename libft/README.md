@@ -42,15 +42,15 @@
 </ul>  
 <br><br>
   
-<h2>Bonus Part<h2>  
+<h2>Bonus Part</h2>  
 <ul>
 <li>'ft_lsrnew' -> yeni liste oluşturan fonksiyon</li>
 <li>'ft_lstadd_front' -> yeni eleman atama ve atanan elemanı listenin başına atayan fonksiyondur</li> 
-<li> 'ft_lstsize' -> liste içerisinde ki elemanları sayan fonksiyondur</li>
-<li> 'ft_lstlas' -> liste içerisinde ki son elemana ulaşan fonksiyon</li>
-<li> 'ft_lstadd_back' -> liste içerisinde son elemana ulaşıp en sona atama</li>
-<li> 'ft_lstdelone' -> liste içerisinde ki bir elemanı silme işlemi </li>
-<li> 'ft_lstclear' -> tüm listeyi silen fonksiyon</li>
+<li>'ft_lstsize' -> liste içerisinde ki elemanları sayan fonksiyondur</li>
+<li>'ft_lstlas' -> liste içerisinde ki son elemana ulaşan fonksiyon</li>
+<li>'ft_lstadd_back' -> liste içerisinde son elemana ulaşıp en sona atama</li>
+<li>'ft_lstdelone' -> liste içerisinde ki bir elemanı silme işlemi </li>
+<li>'ft_lstclear' -> tüm listeyi silen fonksiyon</li>
 <li>'ft_lstiter' -> listenin contentini dışarıdan gönderinlen farklı bir fonksiyona gönderilen fonksiyondur</li>
 <li>'ft_lstmap' -> listenin contentindeki elemanları dışarıdan gönderdiğimiz farklı bir fonksiyon ile çalıştırıp yeni çıktıyı listeye atar</li>
 </ul> 
@@ -60,7 +60,7 @@
   <h2>Makefile</h2>
   
   <p> eşittir ile gösterilenler değişkendir </p>
-  <p>iki nokta kural atam işlemi </p>
+  <p>iki nokta kural atama işlemi </p>
   arşiv bir dosyası na tek tek derlememek için ihtiyaç duyarız 
   -c arşiv oluşturmak için -o dosyalarına ihtiyacımız var 
   -o dosyası olmadan arşiv dosyası olmaz 
