@@ -58,3 +58,4 @@ Bölme işlemi bittikten sonra, sırayla bölüm hanesindekiler ve en son olarak
 
 ![3412](https://user-images.githubusercontent.com/86782430/158179297-b5afc093-c3a7-4036-b7ff-c545b621b7ed.png)
 
+**heksadesimal** d54 çıktı 
