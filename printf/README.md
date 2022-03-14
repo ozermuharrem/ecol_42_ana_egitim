@@ -6,6 +6,7 @@ Yukarıda ki şekilde modellenecetir. <br>
 
 Modelde yer alan "..." kısımı sonsuz argüman alabilen fonksyon anlamına gelmektedir. 
 
+**strarg.h** kütüphanesindedir. 
 
 <table>
   <tr>
