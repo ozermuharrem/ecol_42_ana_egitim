@@ -1,5 +1,11 @@
 <h1>FT_PRINTF</h1>
 
+`ft_printf(const char *, ...);` 
+
+Yukarıda ki şekilde modellenecetir. <br>
+
+Modelde yer alan "..." kısımı sonsuz argüman alabilen fonksyon anlamına gelmektedir. 
+
 
 <table>
   <tr>
