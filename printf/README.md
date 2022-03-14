@@ -15,7 +15,7 @@ Modelde yer alan "..." kısımı sonsuz argüman alabilen fonksyon anlamına gel
   </tr>
   <tr>
     <th>va_start</th>
-    <th>Argümana erişim Sağlar</th>
+    <th>ilk argümana erişim sağlar argümanın nerden başladığını gösterir</th>
   </tr>
   <tr>
     <th>va_arg</th>
