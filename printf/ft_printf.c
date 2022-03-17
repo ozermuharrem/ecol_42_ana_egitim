@@ -80,23 +80,23 @@ int	ft_printf(const char *str, ...)
 	va_end(arg);
 	return (len);
 }
-
 /*
 int main()
 {
     char giris;
-    char *s = "Ferdi TAYFUR";
+    char *t = "Ferdi TAYFUR";
     int d = 53;
     unsigned int u = 2071;
     int x = 0x42FAA;
     int X = 0x53faa;
-    giris += ft_printf("%s", s);
-    giris += ft_printf("\n%d", d);
-    giris += ft_printf("\n%x", x);
-    giris += ft_printf("\n%X", X);
-    giris += ft_printf("\n%p", s);
-    giris += ft_printf("\n%u", u);
-    giris += ft_printf("\n%%");
-    printf("\n%d", giris);
+    giris += ft_printf("%s", t);
+    // giris += ft_printf("\n%d", d);
+    // giris += ft_printf("\n%x", x);
+    // giris += ft_printf("\n%X", X);
+    // giris += ft_printf("\n%p", s);
+    // giris += ft_printf("\n%u", u);
+    // giris += ft_printf("\n%%");
+   	ft_printf("\n%d", giris);
+	//	ft_printf("%d",(ft_printf("%s",s)));
 }
 */
