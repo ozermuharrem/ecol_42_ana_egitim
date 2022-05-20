@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 13:38:35 by mozer             #+#    #+#             */
-/*   Updated: 2022/05/08 14:32:00 by mozer            ###   ########.fr       */
+/*   Updated: 2022/05/20 21:36:00 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ int	main(void)
 	int		pid;
 	char	*pidstr;
 
-	pid = getpid();
-	ft_putstr("PID: ");
-	pidstr = ft_itoa(pid);
+	pid = getpid(); // PID ID atandı
+	ft_putstr("PID ID: "); // ekrana "PID ID" yazdı
+	pidstr = ft_itoa(pid); // pidstr ye pid numarasını stringe çevirdik
 	ft_putstr(pidstr);
 	write(1, "\n", 1);
 	while (1)
