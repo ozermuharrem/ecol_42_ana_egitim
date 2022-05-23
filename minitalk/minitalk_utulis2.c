@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 13:56:40 by mozer             #+#    #+#             */
-/*   Updated: 2022/05/20 21:27:33 by mozer            ###   ########.fr       */
+/*   Updated: 2022/05/21 16:26:40 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,42 +37,42 @@ int	ft_atoi(const char *str)
 	return (res * j);
 }
 
-static char	*set_str(int n, int *bas) //19008
+static char	*set_str(int n, int *bas)
 {
 	char	*str;
 
 	*bas = 1;
-	if (n < 0) // fales
+	if (n < 0)
 	{
 		n *= -1;
 		(*bas)++;
 	}
-	while (n >= 10) // true
+	while (n >= 10)
 	{
-		n /= 10; // 19008 / 10 = 1900 
-		(*bas)++; // 2 
+		n /= 10;
+		(*bas)++;
 	}
-	str = (char *)malloc(sizeof(char) * (*bas + 1)); // str ye bellekte yer ayrıldı
-	if (!str) // str boş ise Null dön boş değil yer ayrıldı
+	str = (char *)malloc(sizeof(char) * (*bas + 1));
+	if (!str)
 		return (NULL);
-	str[0] = '-'; // 0.indix e - atandı
-	str[(*bas)] = '\0';// str 2.indexsine \0 atandı
-	return (str); // -\0 döndü
+	str[0] = '-';
+	str[(*bas)] = '\0';
+	return (str);
 }
 
-char	*ft_itoa(int n) // 19008
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		bas;
 
-	if (n == -2147483648) // false
+	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	str = set_str(n, &bas); // -\0
-	if (n < 0) // false
+	str = set_str(n, &bas);
+	if (n < 0)
 		n *= -1;
-	if (!str) // FALSE
+	if (!str)
 		return (NULL);
-	while (n >= 10) // TRUE
+	while (n >= 10)
 	{
 		str[--bas] = n % 10 + '0';
 		n = n / 10;

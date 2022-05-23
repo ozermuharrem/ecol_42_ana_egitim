@@ -37,7 +37,7 @@ void	message_char(int pid, char *str)
 	i = 0;
 	while (str[i])
 	{
-		ft_send(pid, str[i]);
+		ft_send(pid, str[i]); // m
 		i++;
 	}
 }
