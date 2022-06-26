@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 00:05:11 by mozer             #+#    #+#             */
-/*   Updated: 2022/06/24 03:42:17 by mozer            ###   ########.fr       */
+/*   Updated: 2022/06/26 18:53:19 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ int main(int argc, char **argv)
 	t_list *yiginB;
 	int i;
 	int k;
+	int count;
 
+	count = 0;
 	k = 1;
 	i = 0;
 	yiginA = malloc(sizeof(t_list));
@@ -55,15 +57,42 @@ int main(int argc, char **argv)
 
 	yiginB = yiginA;
 
-	sa(yiginA);
-	yiginA = ra(yiginA);
 
-	yiginB = yiginA;
+	 if(yiginB == NULL)
+	 {
+		 printf("yigin null olduğu için return 0");
+	 	return (0);
+	 }
+	 else
+		{
+			printf("yigin Null olmadiği için buradayiz");
+			while(yiginB != NULL)
+			{
+	 			yiginB = yiginB -> next;
+	 			count++;
+	 		}
+		}
 
-	/* SIRALAMA SONRASINI YAZDIRMAK İÇİN */
-	i = 0;
+//	count = 3;
+	printf("count %d\n",count);
 
+	if(count <= 2)
+	{
+		printf("conunt %d olduğu için return 0",count);
+		return (0);
+	}
+	else
+	{
+		printf("count %d olduğu için sa\n",count);
+		sa(yiginA);
+	}
+	
+	// yiginA = ra(yiginA);
 
+	 yiginB = yiginA;
+
+	// /* SIRALAMA SONRASINI YAZDIRMAK İÇİN */
+	 i = 0;
 	while(i < argc - 1)
 	{
 	printf("%d\n",yiginB -> data);
