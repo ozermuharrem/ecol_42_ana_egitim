@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 00:05:11 by mozer             #+#    #+#             */
-/*   Updated: 2022/06/26 18:53:19 by mozer            ###   ########.fr       */
+/*   Updated: 2022/06/28 22:26:55 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,40 @@ int main(int argc, char **argv)
 {
 	t_list *yiginA;
 	t_list *yiginB;
+	t_list *listStartA;
+	t_list *listStartB;
 	int i;
 	int k;
-	int count;
 
-	count = 0;
 	k = 1;
 	i = 0;
 	yiginA = malloc(sizeof(t_list));
 	yiginA -> data = ft_atoi(argv[k]);
-	yiginB = yiginA;
 
-	 yiginA -> next = malloc(sizeof(t_list));
-	 yiginA -> next -> data = ft_atoi(argv[2]);
+	listStartA = yiginA;
 
-	 yiginA -> next -> next = malloc(sizeof(t_list));
-	 yiginA -> next -> next -> data = ft_atoi(argv[3]);
+	yiginA -> next = malloc(sizeof(t_list));
+	yiginA -> next -> data = ft_atoi(argv[2]);
 
-	 yiginA -> next -> next -> next = malloc(sizeof(t_list));
-	 yiginA -> next -> next -> next -> data = ft_atoi(argv[4]);
+	yiginA -> next -> next = malloc(sizeof(t_list));
+	yiginA -> next -> next -> data = ft_atoi(argv[3]);
+
+	yiginA -> next -> next -> next = malloc(sizeof(t_list));
+	yiginA -> next -> next -> next -> data = ft_atoi(argv[4]);
+	
+	yiginB = malloc(sizeof(t_list));
+	yiginB -> data = 33;
+
+	listStartB = yiginB;
+
+	yiginB -> next = malloc(sizeof(t_list));
+	yiginB -> next -> data = 26;
+
+	yiginB -> next -> next = malloc(sizeof(t_list));
+	yiginB -> next -> next -> data = 21;
+
+	yiginB -> next -> next -> next = malloc(sizeof(t_list));
+	yiginB -> next -> next -> next -> data = 4;
 
 	/* ARGÜMANDAN GELEN VERİYİ LİSTEYE ATAMA İŞLEMİ*/
 
@@ -50,53 +65,27 @@ int main(int argc, char **argv)
 
 	while(i < argc - 1)
 	{
-	printf("%d\n",yiginB -> data);
-	yiginB = yiginB -> next;
-	i++;
+		printf("%d ",listStartA -> data);
+		listStartA = listStartA -> next;
+		i++;
 	}
 
-	yiginB = yiginA;
-
-
-	 if(yiginB == NULL)
-	 {
-		 printf("yigin null olduğu için return 0");
-	 	return (0);
-	 }
-	 else
-		{
-			printf("yigin Null olmadiği için buradayiz");
-			while(yiginB != NULL)
-			{
-	 			yiginB = yiginB -> next;
-	 			count++;
-	 		}
-		}
-
-//	count = 3;
-	printf("count %d\n",count);
-
-	if(count <= 2)
-	{
-		printf("conunt %d olduğu için return 0",count);
-		return (0);
-	}
-	else
-	{
-		printf("count %d olduğu için sa\n",count);
-		sa(yiginA);
-	}
+	listStartA = yiginA;
+ 
+	//sb(yiginB);
 	
-	// yiginA = ra(yiginA);
+	 yiginA = rra(yiginA);
 
-	 yiginB = yiginA;
+	 listStartA = yiginA;
 
 	// /* SIRALAMA SONRASINI YAZDIRMAK İÇİN */
-	 i = 0;
+	
+	i = 0;
+	
 	while(i < argc - 1)
 	{
-	printf("%d\n",yiginB -> data);
-	yiginB = yiginB -> next;
-	i++;
+		printf("%d ",listStartA -> data);
+		listStartA = listStartA -> next;
+		i++;
 	}
 }

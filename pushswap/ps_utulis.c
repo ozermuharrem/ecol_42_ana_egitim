@@ -6,13 +6,13 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 22:50:50 by mozer             #+#    #+#             */
-/*   Updated: 2022/06/23 23:01:47 by mozer            ###   ########.fr       */
+/*   Updated: 2022/06/28 20:33:32 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-static int	ft_isspace(int c)
+int	ft_isspace(int c)
 {
 	if (c == ' ' || c == '\r' || c == '\f' || c == '\v'
 		|| c == '\n' || c == '\t')
