@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 23:21:00 by mozer             #+#    #+#             */
-/*   Updated: 2022/06/28 22:28:13 by mozer            ###   ########.fr       */
+/*   Updated: 2022/07/02 01:52:05 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,51 +75,54 @@ t_list *rb(t_list *yiginB)
 t_list *pa(t_list *yiginA, t_list *yiginB)
 {
 	t_list *listeninYeniBasi;
+	t_list	*new_element;
 
-	listeninYeniBasi = yiginB;
-	listeninYeniBasi -> data = yiginB -> data;
-	listeninYeniBasi -> next = yiginA;
-
+	new_element = malloc(sizeof(t_list));
+	new_element -> data = yiginA -> data;
+	if(!yiginB)
+		yiginB = new_element;
+	else
+		new_element -> next = yiginB;
+	listeninYeniBasi = yiginA -> next;
+	free(yiginA);
+	yiginA = listeninYeniBasi;
+	// listeninYeniBasi = yiginB;
+	// listeninYeniBasi -> data = yiginB -> data;
+	// listeninYeniBasi -> next = yiginA;
 	printf("\npa\n");
-	return (listeninYeniBasi);
+	return (yiginB);
 }
 
 t_list *pb(t_list *yiginA, t_list *yiginB)
 {
-	t_list *listeninYeniBasi;
+	t_list *new;
+	t_list *A_nin_ilk = yiginA;
+	
+	new = malloc(sizeof(t_list));
+	new -> data = yiginA -> data;
+	new -> next = NULL;
 
-	listeninYeniBasi = yiginA;
-	listeninYeniBasi -> data = yiginA -> data;
-	listeninYeniBasi -> next = yiginB;
-
+	if(!yiginB)
+		yiginB = new;
+	else
+		new -> next = yiginB;
+	yiginA = yiginA -> next;
+	free(A_nin_ilk);
 	printf("\npb\n");
-	return (listeninYeniBasi);
+	return (yiginA);
 } 
 
 t_list *rra(t_list *yiginA)
 {
-	t_list *start;
 	t_list *end;
-	int listLength;
+	t_list	*temp = yiginA;
 
-	listLength = 0;
-
-	while(yiginA != NULL)
-		listLength++;
-
-	printf("liste sayısı %d\n",listLength);
-
-	end = list_last(yiginA);
-	start -> data = end;
-
-	while(--listLength)
-	{
-		start -> next = yiginA;
-		yiginA = yiginA -> next;	
-	}
-
+	while(temp -> next -> next)
+		temp = temp -> next;
+	end = temp -> next;
+	temp -> next -> next = yiginA;
+	temp -> next = NULL;
+	yiginA = end;
 	printf("\nrra\n");
-
-	return (start);
-	
+	return (end);
 }

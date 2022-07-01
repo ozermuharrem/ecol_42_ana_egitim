@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    MAKEFILE                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: mozer <mozer@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/24 02:00:29 by mozer             #+#    #+#              #
-#    Updated: 2022/06/24 02:19:33 by mozer            ###   ########.fr        #
+#    Updated: 2022/07/01 22:12:59 by mozer            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,12 @@ NAME =	./*.c
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
 OBJNAME = $(NAME:.c=.o)
+MESAJ = *.txt
+CAT = cat
 
 all :
 	$(CC) $(FLAGS) $(NAME) -o $(NAMEFILE)
+##	$(CAT) $(MESAJ)
 
 clean:
 	rm -rf $(OBJNAME)

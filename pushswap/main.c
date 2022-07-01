@@ -6,7 +6,7 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 00:05:11 by mozer             #+#    #+#             */
-/*   Updated: 2022/06/28 22:26:55 by mozer            ###   ########.fr       */
+/*   Updated: 2022/07/02 00:13:34 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,68 +15,46 @@
 int main(int argc, char **argv)
 {
 	t_list *yiginA;
-	t_list *yiginB;
+	t_list *yiginB = NULL;
 	t_list *listStartA;
-	t_list *listStartB;
+	//t_list *listStartB;
 	int i;
 	int k;
 
 	k = 1;
 	i = 0;
 	yiginA = malloc(sizeof(t_list));
-	yiginA -> data = ft_atoi(argv[k]);
-
+	yiginA -> data = atoi(argv[k]);
+	yiginA -> next = NULL;
 	listStartA = yiginA;
-
-	yiginA -> next = malloc(sizeof(t_list));
-	yiginA -> next -> data = ft_atoi(argv[2]);
-
-	yiginA -> next -> next = malloc(sizeof(t_list));
-	yiginA -> next -> next -> data = ft_atoi(argv[3]);
-
-	yiginA -> next -> next -> next = malloc(sizeof(t_list));
-	yiginA -> next -> next -> next -> data = ft_atoi(argv[4]);
-	
-	yiginB = malloc(sizeof(t_list));
-	yiginB -> data = 33;
-
-	listStartB = yiginB;
-
-	yiginB -> next = malloc(sizeof(t_list));
-	yiginB -> next -> data = 26;
-
-	yiginB -> next -> next = malloc(sizeof(t_list));
-	yiginB -> next -> next -> data = 21;
-
-	yiginB -> next -> next -> next = malloc(sizeof(t_list));
-	yiginB -> next -> next -> next -> data = 4;
 
 	/* ARGÜMANDAN GELEN VERİYİ LİSTEYE ATAMA İŞLEMİ*/
 
-	//  while(k < argc)
-	//  {
-	//  	yiginA -> next = malloc(sizeof(t_list));
-	//  	yiginA -> data = ft_atoi(argv[k]);
-	// 	yiginA = yiginA -> next;
-	// 	k++;
-	//  }
+	 while(k < argc - 1)
+	 {
+		t_list	*new;
+		new = malloc(sizeof(t_list));
+		new -> data = atoi(argv[++k]);
+		new -> next = NULL;
+		list_last(yiginA) -> next = new;
+	 }
 
 	/* MEVCUT DURUMU YAZDIRMAK İÇİN */
 
-	while(i < argc - 1)
-	{
-		printf("%d ",listStartA -> data);
-		listStartA = listStartA -> next;
-		i++;
-	}
-
-	listStartA = yiginA;
+	// while(i < argc - 1)
+	// {
+	// 	printf("%d ",listStartA -> data);
+	// 	listStartA = listStartA -> next;
+	// 	i++;
+	// }
  
 	//sb(yiginB);
 	
-	 yiginA = rra(yiginA);
-
-	 listStartA = yiginA;
+	yiginB = pb(yiginA, yiginB);
+	yiginB = pb(yiginA, yiginB);
+	 
+	printf("b1: %d\n", yiginB -> data);
+	printf("b2: %d\n", yiginB -> next -> data);
 
 	// /* SIRALAMA SONRASINI YAZDIRMAK İÇİN */
 	
