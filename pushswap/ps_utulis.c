@@ -6,11 +6,21 @@
 /*   By: mozer <mozer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 22:50:50 by mozer             #+#    #+#             */
-/*   Updated: 2022/06/28 20:33:32 by mozer            ###   ########.fr       */
+/*   Updated: 2022/09/14 20:20:34 by mozer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	len;
+
+	len = 0;
+	while (str[len] != 0)
+		len++;
+	return (len);
+}
 
 int	ft_isspace(int c)
 {
@@ -29,28 +39,58 @@ int	ft_isdigit(int c)
 
 int	ft_atoi(const char *str)
 {
-	int		sign;
-	long	res;
+	int				i;
+	unsigned long	ret;
+	int				isnegative;
 
-	res = 0;
-	sign = 1;
-	while (ft_isspace(*str))
-		str++;
-	if (*str == '+' || *str == '-')
+	i = 0;
+	ret = 0;
+	isnegative = 1;
+	while (str[i] == '\n' && str[i] == ' ')
+		i++;
+	if (str[i] == '-')
+		isnegative *= -1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (*str == '-')
-			sign *= -1;
-		str++;
+		ret = (ret * 10) + (str[i] - '0');
+		i++;
 	}
-	while (ft_isdigit(*str))
+	if ((ret > 2147483647 && isnegative != -1)
+		|| (ret > 2147483648 && isnegative == -1))
 	{
-		res = (res * 10) + (*str - '0');
-		str++;
+		write(2, "Error\n", 6);
+		exit(EXIT_FAILURE);
 	}
-	res = res * sign;
-	if (res >= -2147483648 && res <= 2147483647)
-		return (res);
-	if (sign == -1)
-		return (0);
-	return (-1);
+	return (ret * isnegative);
+}
+
+int	is_uniq(t_list *stack)
+{
+	int		data;
+	t_list	*temp;
+
+	temp = stack;
+	data = temp->data;
+	while (stack && temp->next != NULL)
+	{
+		if (stack->next != NULL && data == stack->next->data)
+		{
+			write(1, "Error\n", 6);
+			pause();
+			free_stack(&stack);
+			exit(1);
+			return (0);
+		}
+		else if (stack->next == NULL)
+		{
+			temp = temp->next;
+			data = temp->data;
+			stack = temp;
+		}
+		else
+			stack = stack->next;
+	}
+	return (1);
 }

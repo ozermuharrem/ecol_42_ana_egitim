@@ -6,32 +6,27 @@
 #    By: mozer <mozer@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/24 02:00:29 by mozer             #+#    #+#              #
-#    Updated: 2022/07/01 22:12:59 by mozer            ###   ########.fr        #
+#    Updated: 2022/09/14 20:20:55 by mozer            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAMEFILE = pushswap
-NAME =	./*.c
-CC = gcc
-FLAGS = -Wall -Wextra -Werror
-OBJNAME = $(NAME:.c=.o)
-MESAJ = *.txt
-CAT = cat
+NAME :=	push_swap
+CC := gcc
+FLAGS := -Wall -Wextra -Werror
+FILES := $(shell find . -type f -name "*.c")
+OBJNAME := $(FILES:%.c=%.o)
 
-all :
-	$(CC) $(FLAGS) $(NAME) -o $(NAMEFILE)
-##	$(CAT) $(MESAJ)
+all : $(NAME)
+
+$(NAME): $(OBJNAME)
+	@$(CC) $(FLAGS) $(OBJNAME) -o $(NAME)
 
 clean:
-	rm -rf $(OBJNAME)
+	@rm -rf *.o
 
 fclean: clean
-	rm -rf $(NAMEFILE)
+	@rm -rf $(NAME)
 
-norm:
-	norminette *.[ch]
+re: fclean all
 
-re:
-	fclean all
-
-.PHONY : re fclean clean all  norm
+.PHONY : re fclean clean all
