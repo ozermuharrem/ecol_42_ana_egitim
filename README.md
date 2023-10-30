@@ -41,12 +41,12 @@
         <tr>
       <th scope="row">4</th>
       <td>born2beroot</td>
-      <td>-</td>
+      <td>Linux sistem yönetimi ssh, sudo, ufw Crontab ve Monitoring.sh toolları ve yapıları kullanarak yeni bir server inşa ettiğimiz bir projedir. </td>
     </tr>
         <tr>
       <th scope="row">5</th>
       <td>minitalk</td>
-      <td>-</td>
+      <td>Bu projenin amacı, UNIX sinyallerini kullanarakküçük bir veri değişim programı kodlamaktır. </td>
     </tr>
         <tr>
       <th scope="row">6</th>
