@@ -51,7 +51,7 @@
         <tr>
       <th scope="row">6</th>
       <td>push_swap</td>
-      <td>-</td>
+      <td>Bu proje bize mümkün olan endüşük sayıda hamleyi yaparak ve sınırlı bir talimat seti kullanarak bir yığındaki verileri sıralatacak.Başarabilmek için çeşitli tiplerdeki  algoritmaları manipüle edip optimal bir veri sıralaması için en uygun olanını (birçoğu arasından) seçmemiz gerek.</td>
     </tr>
         <tr>
       <th scope="row">7</th>
