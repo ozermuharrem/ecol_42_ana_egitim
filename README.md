@@ -53,12 +53,12 @@
       <td>push_swap</td>
       <td>Bu proje bize mümkün olan endüşük sayıda hamleyi yaparak ve sınırlı bir talimat seti kullanarak bir yığındaki verileri sıralatacak.Başarabilmek için çeşitli tiplerdeki  algoritmaları manipüle edip optimal bir veri sıralaması için en uygun olanını (birçoğu arasından) seçmemiz gerek.</td>
     </tr>
-        <tr>
+      <tr>
       <th scope="row">7</th>
       <td>so_long</td>
-      <td>-</td>
+      <td>Bu proje çok küçük bir 2D oyundur. Amacı dokular, spritelar ve diğer bazı temel oyun öğeleriyle çalışmanızı sağlamaktır.</td>
     </tr>
-        <tr>
+      <tr>
       <th scope="row">8</th>
       <td>philosopers</td>
       <td>-</td>
