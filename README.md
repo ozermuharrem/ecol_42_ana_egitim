@@ -61,7 +61,7 @@
       <tr>
       <th scope="row">8</th>
       <td>philosopers</td>
-      <td>-</td>
+      <td>Bu projede ile, bir süreci iş parçacığına ayırmanın temellerini, iş parçacıklarının nasıl oluşturulacağını ve muteksleri keşfettik.</td>
     </tr>
         <tr>
       <th scope="row">9</th>
