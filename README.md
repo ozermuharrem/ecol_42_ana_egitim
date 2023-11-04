@@ -66,7 +66,7 @@
         <tr>
       <th scope="row">9</th>
       <td>MiniShell</td>
-      <td>-</td>
+      <td>Bu proje basit bir shell oluşturmakla ilgilidir. Evet, kendi küçük bash'ımız. Süreçler ve dosya tanımlayıcıları hakkında çok şey göreceğiz.</td>
     </tr>
         <tr>
       <th scope="row">10</th>
